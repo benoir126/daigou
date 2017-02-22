@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <openerp>
 
@@ -60,12 +60,17 @@
 
                 <field name="weixinname"/>
 
+                <field name="telephone"/>
+
+                <field name="adresse"/>
+
+                <field name="city"/>
+
             </tree>
 
         </field>
 
     </record>
-
 
 
     <record model="ir.actions.act_window" id="action_client"> 
