@@ -15,13 +15,28 @@
             <form string="Client"> 
 
                 <label string="Name" />
-
                 <field name="name"/> 
 
-                <label string="Wei Xin ID" /> 
-
+                <label string="Wei Xin ID" />
                 <field name="weixinname"/>  
 
+                <label string="Number of telephone" />
+                <field name="telephone"/>
+
+                <label string="Adresse of client" />
+                <field name="adresse"/>
+
+                <label string="City" />
+                <field name="city"/>
+
+                <label string="CP" />
+                <field name="cp"/>
+
+                <label string="Province" />
+                <field name="province"/>
+
+                <label string="Country" />
+                <field name="country"/>
             </form>
 
         </field>
