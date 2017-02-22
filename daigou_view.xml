@@ -6,33 +6,23 @@
 
         <data>
 
-    <record model="ir.ui.view" id="author_form"> 
+    <record model="ir.ui.view" id="client_adresse_form"> 
 
-        <field name="name">author.form</field> 
+        <field name="name">client.adresse</field> 
 
-        <field name="model">mylibrary.author</field> 
+        <field name="model">daigou.client</field> 
 
         <field name="arch" type="xml">
 
-            <form string="Author"> 
+            <form string="Client"> 
 
-                <label string="First Name" />
+                <label string="Name" />
 
-                <field name="firstname"/> 
+                <field name="name"/> 
 
-                <label string="Last Name" /> 
+                <label string="Wei Xin ID" /> 
 
-                <field name="lastname"/>  
-
-                <notebook colspan="3">
-
-                    <page string="Books">
-
-                      <field name="book_ids"/> 
-
-                    </page>
-
-                </notebook>
+                <field name="weixinname"/>  
 
             </form>
 
@@ -41,24 +31,22 @@
     </record>
 
 
+    <record model="ir.ui.view" id="client_adresse_tree">
 
-    <record model="ir.ui.view" id="author_tree">
+        <field name="name">client.tree</field>
 
-        <field name="name">author.tree</field>
-
-        <field name="model">mylibrary.author</field>
+        <field name="model">daigou.client</field>
 
         <field name="type">tree</field> 
 
         <field name="arch" type="xml">
 
-            <tree string="Author" > 
+            <tree string="List.Client" > 
 
-                <field name="firstname"/>
+                <field name="name"/>
 
-                <field name="lastname"/>
+                <field name="weixinname"/>
 
-                <field name="book_ids"/> 
 
             </tree>
 
@@ -68,11 +56,11 @@
 
 
 
-    <record model="ir.actions.act_window" id="action_author"> 
+    <record model="ir.actions.act_window" id="action_client"> 
 
-        <field name="name">Author</field> 
+        <field name="name">Client</field> 
 
-        <field name="res_model">mylibrary.author</field> 
+        <field name="res_model">daigou.client</field> 
 
         <field name="view_type">form</field> 
 
@@ -81,84 +69,11 @@
     </record>
 
 
+    <menuitem id="daigou" name="Daigou"/>
 
-    <record model="ir.ui.view" id="book_form">
+       <menuitem name="Daigou" id="section_main_menu_daigou" parent="daigou" />
 
-        <field name="name">book.form</field>
-
-        <field name="model">mylibrary.book</field>
-
-        <field name="arch" type="xml">
-
-            <form string="Book" >
-
-                <label string="Title" />
-
-                <field name="title"/>
-
-                <label string="Genre" />
-
-                <field name="genre"/>
-
-                <label string="Author" />
-
-                <field name="author_id"/>
-
-            </form>
-
-        </field>
-
-    </record>
-
-
-
-    <record model="ir.ui.view" id="book_tree">
-
-        <field name="name">book.tree</field>
-
-        <field name="model">mylibrary.book</field>
-
-        <field name="arch" type="xml">
-
-            <tree string="Book" >
-
-                <field name="title"/>
-
-                <field name="genre"/>
-
-                <field name="author_id"/>
-
-            </tree>
-
-        </field>
-
-    </record>
-
-
-
-    <record model="ir.actions.act_window" id="action_book">
-
-        <field name="name">Book</field>
-
-        <field name="res_model">mylibrary.book</field>
-
-        <field name="view_type">form</field>
-
-        <field name="view_mode">tree,form</field>
-
-    </record>
-
-
-
-    <menuitem id="mylibrary" name="Mylibrary"/>
-
-       <menuitem name="Mylibrary" id="section_main_menu_mylibrary" parent="mylibrary" />
-
-        <menuitem name="Authors" id="choix_author" parent="section_main_menu_mylibrary" action="action_author"/>
-
-       <menuitem name="Books" id="choix_book" parent="section_main_menu_mylibrary" action="action_book"/>
-
-
+        <menuitem name="clients" id="choix_client" parent="section_main_menu_daigou" action="action_client"/>
 
     </data>
 
