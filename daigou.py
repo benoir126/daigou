@@ -2,8 +2,6 @@
 
 from openerp import models, fields
 
-
-
 class Client(models.Model):
 
     _name = 'daigou.client'
@@ -26,3 +24,6 @@ class Client(models.Model):
 
     country = fields.Char('The country')
 
+    level_client = fields.Integer('User level')
+
+    email_client = fields.Char('The Email')
