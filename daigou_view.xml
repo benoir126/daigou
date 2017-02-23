@@ -75,7 +75,7 @@
 
     <record model="ir.actions.act_window" id="action_client"> 
 
-        <field name="name">客户信息</field>
+        <field name="name">Client</field>
 
         <field name="res_model">daigou.client</field> 
 
