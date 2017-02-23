@@ -8,22 +8,22 @@ class Client(models.Model):
 
     _rec_name = 'weixinname'
 
-    name = fields.Char('Name', required=True)
+    name = fields.Char('姓名', required=True)
 
-    weixinname = fields.Char('Wei Xin ID')  
+    weixinname = fields.Char('微信号')
 
-    telephone = fields.Char('number of telephone', required=True)
+    telephone = fields.Char('电话号码', required=True)
 
-    adresse = fields.Char('adresse of client', required=True)
+    adresse = fields.Char('地址', required=True)
 
-    city = fields.Char('The city', required=True)
+    city = fields.Char('城市', required=True)
 
-    cp = fields.Char('Code postal')
+    cp = fields.Char('邮编')
 
-    province = fields.Char('The province')
+    province = fields.Char('省份')
 
-    country = fields.Char('The country')
+    country = fields.Char('国家')
 
-    level_client = fields.Integer('User level')
+    level_client = fields.Integer('客户等级')
 
-    email_client = fields.Char('The Email')
+    email_client = fields.Char('电子邮箱')
