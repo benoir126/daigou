@@ -2,13 +2,13 @@
 
 {
 
-    'name': 'Daigou - module for tiesanjiao',
+    'name': '代购业务管理模块',
 
     'version': '0.1',
 
     'category': 'Generic Modules/Others',
 
-    'description': """ This is one module for Odoo v9
+    'description': """ 基于odoo 9 开发的代购业务管理模块
 
     """,
 
