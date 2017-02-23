@@ -86,11 +86,11 @@
     </record>
 
 
-    <menuitem id="daigou" name="Daigou"/>
+    <menuitem id="daigou" name="代购业务"/>
 
-       <menuitem name="Daigou" id="section_main_menu_daigou" parent="daigou" />
+       <menuitem name="代购业务" id="section_main_menu_daigou" parent="daigou" />
 
-        <menuitem name="clients" id="choix_client" parent="section_main_menu_daigou" action="action_client"/>
+        <menuitem name="客户地址信息" id="choix_client" parent="section_main_menu_daigou" action="action_client"/>
 
     </data>
 
