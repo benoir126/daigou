@@ -14,28 +14,28 @@
 
             <form string="Client"> 
 
-                <label string="Name" />
+                <label string="姓名" />
                 <field name="name"/> 
 
-                <label string="Wei Xin ID" />
+                <label string="微信号" />
                 <field name="weixinname"/>  
 
-                <label string="Number of telephone" />
+                <label string="电话号码" />
                 <field name="telephone"/>
 
-                <label string="Adresse of client" />
+                <label string="地址" />
                 <field name="adresse"/>
 
-                <label string="City" />
+                <label string="城市" />
                 <field name="city"/>
 
-                <label string="CP" />
+                <label string="邮编" />
                 <field name="cp"/>
 
-                <label string="Province" />
+                <label string="省份" />
                 <field name="province"/>
 
-                <label string="Country" />
+                <label string="国家" />
                 <field name="country"/>
             </form>
 
