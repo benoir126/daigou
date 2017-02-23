@@ -6,7 +6,7 @@
 
     <record model="ir.ui.view" id="client_adresse_form"> 
 
-        <field name="name">client.adresse</field> 
+        <field name="name">client.adresse.form</field>
 
         <field name="model">daigou.client</field> 
 
@@ -37,6 +37,9 @@
 
                 <label string="国家" />
                 <field name="country"/>
+
+                <label string="客户等级" />
+                <field name="level_client"/>
             </form>
 
         </field>
@@ -46,7 +49,7 @@
 
     <record model="ir.ui.view" id="client_adresse_tree">
 
-        <field name="name">client.tree</field>
+        <field name="name">client.adresse.tree</field>
 
         <field name="model">daigou.client</field>
 
@@ -75,7 +78,7 @@
 
     <record model="ir.actions.act_window" id="action_client"> 
 
-        <field name="name">Client</field>
+        <field name="name">action.client</field>
 
         <field name="res_model">daigou.client</field> 
 
@@ -86,7 +89,7 @@
     </record>
 
 
-    <menuitem id="daigou" name="代购业务"/>
+    <menuitem id="daigou" name="代购业务" sequence="100" />
 
        <menuitem name="代购业务管理" id="section_main_menu_daigou" parent="daigou" />
 
