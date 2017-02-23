@@ -27,3 +27,9 @@ class Client(models.Model):
     level_client = fields.Integer('客户等级')
 
     email_client = fields.Char('电子邮箱')
+
+class ProductCatalog(models.Model):
+
+    _name = 'product.catalog'
+
+    name = fields.Char('产品类别名称', required=True)
