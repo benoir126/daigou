@@ -16,6 +16,10 @@
 
     'depends': ['base'],
 
+    'data': ['daigou_view.xml',],
+
+    'website': 'www.google.com',
+
     'installable': True,
 
     'auto_install': False,
