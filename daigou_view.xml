@@ -59,9 +59,9 @@
 
             <tree string="List.Client" > 
 
-                <field name="name"/>
-
                 <field name="weixinname"/>
+
+                <field name="name"/>
 
                 <field name="telephone"/>
 
@@ -78,7 +78,7 @@
 
     <record model="ir.actions.act_window" id="action_client"> 
 
-        <field name="name">action.client</field>
+        <field name="name">客户列表</field>
 
         <field name="res_model">daigou.client</field> 
 
