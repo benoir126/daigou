@@ -14,28 +14,28 @@
 
             <form string="Client"> 
 
-                <label string="姓名" />
+                <label string="Name" />
                 <field name="name"/> 
 
-                <label string="微信号" />
+                <label string="Wei Xin ID" />
                 <field name="weixinname"/>  
 
-                <label string="电话号码" />
+                <label string="Number of telephone" />
                 <field name="telephone"/>
 
-                <label string="地址" />
+                <label string="Adresse of client" />
                 <field name="adresse"/>
 
-                <label string="城市" />
+                <label string="City" />
                 <field name="city"/>
 
-                <label string="邮编" />
+                <label string="CP" />
                 <field name="cp"/>
 
-                <label string="省份" />
+                <label string="Province" />
                 <field name="province"/>
 
-                <label string="国家" />
+                <label string="Country" />
                 <field name="country"/>
             </form>
 
@@ -86,11 +86,11 @@
     </record>
 
 
-    <menuitem id="daigou" name="代购业务"/>
+    <menuitem id="daigou" name="Daigou"/>
 
-       <menuitem name="代购业务" id="section_main_menu_daigou" parent="daigou" />
+       <menuitem name="Daigou" id="section_main_menu_daigou" parent="daigou" />
 
-        <menuitem name="客户地址信息" id="choix_client" parent="section_main_menu_daigou" action="action_client"/>
+        <menuitem name="clients" id="choix_client" parent="section_main_menu_daigou" action="action_client"/>
 
     </data>
 
