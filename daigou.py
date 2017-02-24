@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import models, fields, api
 
+#----------------------------------------------------------
+# Clients
+#----------------------------------------------------------
 class Client(models.Model):
 
     _name = 'daigou.client'
@@ -28,8 +31,25 @@ class Client(models.Model):
 
     email_client = fields.Char('电子邮箱')
 
-class ProductCatalog(models.Model):
+#----------------------------------------------------------
+# Categories
+#----------------------------------------------------------
+class ProductCategory(models.Model):
 
-    _name = 'product.catalog'
+    _name = 'daigou.product.category'
+
+    _description = "Product Category"
+
+    _rec_name = 'name'
 
     name = fields.Char('产品类别名称', required=True)
+
+    parent_id = fields.many2one('daigou.product.category','Parent Category', select=True, ondelete='cascade')
+
+    child_id = fields.one2many('daigou.product.category', 'parent_id', string='Child Categories')
+
+    sequence = fields.integer('Sequence', select=True, help="Gives the sequence order when displaying a list of product categories.")
+
+    type = fields.selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
+
+
