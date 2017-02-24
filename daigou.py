@@ -46,12 +46,12 @@ class ProductCategory(models.Model):
 
     complete_name = fields.Char('产品类别描述', required=True)
 
-    parent_id = fields.many2one('daigou.product.category','Parent Category', select=True, ondelete='cascade')
+    parent_id = fields.Many2one('daigou.product.category','Parent Category', select=True, ondelete='cascade')
 
-    child_id = fields.one2many('daigou.product.category', 'parent_id', string='Child Categories')
+    child_id = fields.One2many('daigou.product.category', 'parent_id', string='Child Categories')
 
-    sequence = fields.integer('Sequence', select=True, help="Gives the sequence order when displaying a list of product categories.")
+    sequence = fields.Integer('Sequence', select=True, help="Gives the sequence order when displaying a list of product categories.")
 
-    type = fields.selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
+    type = fields.Selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
 
 
