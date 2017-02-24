@@ -44,6 +44,8 @@ class ProductCategory(models.Model):
 
     name = fields.Char('产品类别名称', required=True)
 
+    complete_name = fields.Char('产品类别描述', required=True)
+
     parent_id = fields.many2one('daigou.product.category','Parent Category', select=True, ondelete='cascade')
 
     child_id = fields.one2many('daigou.product.category', 'parent_id', string='Child Categories')
