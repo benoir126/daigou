@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from datetime import date
 from openerp import models, fields, api
 
 #----------------------------------------------------------
@@ -63,7 +64,7 @@ class DaigouOrder(models.Model):
 
     _order = 'date_order'
 
-    date_order = fields.Date('Date for order', help="Date for the order item validation")
+    date_order = fields.Date('Date for order', help="Date for the order item validation",default=date.today().strftime('%Y-%m-%d'))
 
     client_id = fields.Integer('客户ID')
 
