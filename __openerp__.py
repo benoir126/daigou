@@ -12,7 +12,7 @@
 
     """,
 
-    'author': 'Dolphin',
+    'author': 'Dolphin ZHENG',
 
     'depends': ['base'],
 
