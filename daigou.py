@@ -64,19 +64,19 @@ class DaigouOrder(models.Model):
 
     _order = 'date_order'
 
-    date_order = fields.Date('Date for order', help="Date for the order item validation",default=date.today().strftime('%Y-%m-%d'))
+    date_order = fields.Date('下单日期', help="下单日期缺省是当天日期",default=date.today().strftime('%Y-%m-%d'))
 
     client_id = fields.Integer('客户ID')
 
     order_item = fields.Char('商品名称')
 
-    price_item_vente_unit_str = fields.Float('Price definition')
+    price_item_vente_unit_str = fields.Float('商品最初定价')
 
     price_item_vente_unit_fin = fields.Float('最终卖价')
 
     price_item_vente_unit_achat = fields.Float('商品购买价')
 
-    qte_order = fields.Integer('下单数量')
+    qte_order = fields.Integer('下单数量',default=1)
 
     qte_ok = fields.Integer('已经购买数量')
 
