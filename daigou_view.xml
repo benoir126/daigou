@@ -94,7 +94,8 @@
        <menuitem name="代购业务管理" id="section_main_menu_daigou" parent="daigou" />
 
         <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
-        <menuitem name="订单管理" id="daigou_menu_sale_client" parent="section_main_menu_daigou" sequence="2" />
+
+        <menuitem name="订单管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
     </data>
 
 </openerp>
