@@ -95,7 +95,7 @@
 
         <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
 
-        <menuitem name="订单管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
+        <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
     </data>
 
 </openerp>
