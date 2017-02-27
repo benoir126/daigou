@@ -88,6 +88,17 @@
 
     </record>
 
+    <record model="ir.actions.act_window" id="action_order">
+
+        <field name="name">订单查询</field>
+
+        <field name="res_model">daigou.order</field>
+
+        <field name="view_type">form</field>
+
+        <field name="view_mode">tree,form</field>
+
+    </record>
 
     <menuitem id="daigou" name="代购业务" sequence="100" />
 
@@ -95,7 +106,7 @@
 
         <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
 
-        <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
+        <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_order" sequence="2" />
     </data>
 
 </openerp>
