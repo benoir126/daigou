@@ -88,6 +88,49 @@
 
     </record>
 
+   <record model="ir.ui.view" id="client_order_form">
+
+        <field name="name">client.order.form</field>
+
+        <field name="model">daigou.order</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Client">
+
+                <label string="下单日期" />
+                <field name="date_order"/>
+
+                <label string="客户ID" />
+                <field name="client_id"/>
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <record model="ir.ui.view" id="client_order_tree">
+
+        <field name="name">client.order.tree</field>
+
+        <field name="model">daigou.order</field>
+
+        <field name="type">tree</field>
+
+        <field name="arch" type="xml">
+
+            <tree string="List.Order" >
+
+                <field name="date_order"/>
+
+                <field name="client_id"/>
+
+            </tree>
+
+        </field>
+
+    </record>
     <record model="ir.actions.act_window" id="action_order">
 
         <field name="name">订单查询</field>
