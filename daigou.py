@@ -61,7 +61,7 @@ class DaigouOrder(models.Model):
 
     _description = "orders"
 
-    _order = 'name'
+    _order = 'date_order'
 
     date_order = fields.Date('Date for order', help="Date for the order item validation")
 
