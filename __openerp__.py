@@ -26,6 +26,4 @@
 
     'application': True,
 
-
-
 }
