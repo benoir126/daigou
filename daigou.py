@@ -82,11 +82,11 @@ class DaigouOrder(models.Model):
 
     paye_total = fields.Float('付款总数')
 
-    fl_baoyou = fields.Boolean('Active', help="是否包邮")
+    fl_baoyou = fields.Boolean('Active', help="是否包邮",default=False)
 
-    fl_yunfei = fields.Boolean('Active', help="是否已经付运费")
+    fl_yunfei = fields.Boolean('Active', help="是否已经付运费",default=True)
 
-    taux_achat = fields.Float('汇率')
+    taux_achat = fields.Float('汇率',default=7.50)
 
     commentaire_achat = fields.Char('备注')
 
