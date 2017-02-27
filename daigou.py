@@ -89,6 +89,6 @@ class DaigouOrder(models.Model):
 
     commentaire_achat = fields.Char('备注')
 
-    order_statut = fields.Selection([('已下单', '采购完成','已经发货','退款')], string="订单状态")
+    order_statut = fields.Selection([(0,u'已下单'), (1,u'采购完成'),(2,u'已经发货'),(99,u'退款')],u'订单状态')
 
 
