@@ -55,3 +55,40 @@ class ProductCategory(models.Model):
     type = fields.Selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
 
 
+class DaigouOrder(models.Model):
+
+    _name = 'daigou.order'
+
+    _description = "orders"
+
+    _order = 'name'
+
+    date_order = fields.Date('Date for order', help="Date for the order item validation")
+
+    client_id = fields.Integer('客户ID')
+
+    order_item = fields.Char('商品名称')
+
+    price_item_vente_unit_str = fields.Float('Price definition')
+
+    price_item_vente_unit_fin = fields.Float('最终卖价')
+
+    price_item_vente_unit_achat = fields.Float('商品购买价')
+
+    qte_order = fields.Integer('下单数量')
+
+    qte_ok = fields.Integer('已经购买数量')
+
+    paye_total = fields.Float('付款总数')
+
+    fl_baoyou = fields.Boolean('Active', help="是否包邮")
+
+    fl_yunfei = fields.Boolean('Active', help="是否已经付运费")
+
+    taux_achat = fields.Float('汇率')
+
+    commentaire_achat = fields.Char('备注')
+
+    order_statut = fields.Selection([('已下单', '采购完成','已经发货','退款')], string="订单状态")
+
+
