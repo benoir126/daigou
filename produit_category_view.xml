@@ -5,7 +5,7 @@
 
     <data>
 
-        <menuitem name="产品类别管理" id="menu_daigou_product_category_action_form" parent="section_main_menu_daigou" />
+        <menuitem name="产品类别管理" id="menu_daigou_product_category_action_form" parent="daigou.section_main_menu_daigou" />
 
     </data>
 
