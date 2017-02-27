@@ -70,7 +70,7 @@ class DaigouOrder(models.Model):
 
     order_item = fields.Char('商品名称')
 
-    price_item_vente_unit_str = fields.Float('Price definition')
+    price_item_vente_unit_str = fields.Float('商品最初报价')
 
     price_item_vente_unit_fin = fields.Float('最终卖价')
 
