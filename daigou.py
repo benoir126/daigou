@@ -62,7 +62,7 @@ class DaigouOrder(models.Model):
 
     _description = "orders"
 
-    _order = 'date_order'
+    _order = 'date_order desc'
 
     date_order = fields.Date('Date for order', help="Date for the order item validation",default=date.today().strftime('%Y-%m-%d'))
 
@@ -76,9 +76,9 @@ class DaigouOrder(models.Model):
 
     price_item_vente_unit_achat = fields.Float('商品购买价')
 
-    qte_order = fields.Integer('下单数量')
+    qte_order = fields.Integer('下单数量',default=1)
 
-    qte_ok = fields.Integer('已经购买数量')
+    qte_ok = fields.Integer('已经购买数量',default=0)
 
     paye_total = fields.Float('付款总数')
 
