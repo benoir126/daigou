@@ -4,7 +4,7 @@
 
     'name': '代购业务管理模块',
 
-    'version': '0.1',
+    'version': '0.2',
 
     'category': 'Generic Modules/Others',
 
@@ -16,7 +16,7 @@
 
     'depends': ['base'],
 
-    'data': ['daigou_view.xml',],
+    'data': ['daigou_view.xml'],
 
     'website': 'www.google.com',
 
