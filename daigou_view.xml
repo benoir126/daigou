@@ -13,34 +13,35 @@
 
         <field name="arch" type="xml">
 
-            <form string="Client"> 
-                <group>
+            <form string="Client">
+                <sheet>
                     <label string="姓名" />
                     <field name="name"/>
                     <label string="微信号" />
                     <field name="weixinname"/>
-                </group>
 
-                <label string="电话号码" />
-                <field name="telephone"/>
+                    <label string="电话号码" />
+                    <field name="telephone"/>
 
-                <label string="地址" />
-                <field name="adresse"/>
+                    <label string="地址" />
+                    <field name="adresse"/>
 
-                <label string="城市" />
-                <field name="city"/>
+                    <label string="城市" />
+                    <field name="city"/>
 
-                <label string="邮编" />
-                <field name="cp"/>
+                    <label string="邮编" />
+                    <field name="cp"/>
 
-                <label string="省份" />
-                <field name="province"/>
+                    <label string="省份" />
+                    <field name="province"/>
 
-                <label string="国家" />
-                <field name="country"/>
+                    <label string="国家" />
+                    <field name="country"/>
 
-                <label string="客户等级" />
-                <field name="level_client"/>
+                    <label string="客户等级" />
+                    <field name="level_client"/>
+                </sheet>
+
             </form>
 
         </field>
