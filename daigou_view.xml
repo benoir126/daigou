@@ -14,12 +14,12 @@
         <field name="arch" type="xml">
 
             <form string="Client"> 
-
-                <label string="姓名" />
-                <field name="name"/> 
-
-                <label string="微信号" />
-                <field name="weixinname"/>  
+                <group>
+                    <label string="姓名" />
+                    <field name="name"/>
+                    <label string="微信号" />
+                    <field name="weixinname"/>
+                </group>
 
                 <label string="电话号码" />
                 <field name="telephone"/>
