@@ -50,14 +50,14 @@
 
     <record id="client_adresse_tree_view" model="ir.ui.view">
 
-        <field name="name">client.adresse.tree</field>
+        <field name="name">client.tree</field>
 
         <field name="model">daigou.client</field>
 
-        <field name="type">tree</field> 
-
         <field name="arch" type="xml">
-
+            <header>
+                <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
+            </header>
             <tree string="List.Client" > 
 
                 <field name="weixinname"/>
@@ -78,25 +78,12 @@
 
 
     <record id="show_list_client_action" model="ir.actions.act_window">
-
-        <field name="name">List of Clients</field>
-
+        <field name="name">Clientlists</field>
+        <field name="type">ir.actions.act_window</field>
         <field name="res_model">daigou.client</field> 
-
-        <field name="arch" type="xml">
-            <form string="Client">
-                <header>
-                    <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
-                </header>
-                <sheet>
-                    <field name="weixinname"/>
-                    <field name="name"/>
-                    <field name="telephone"/>
-                    <field name="city"/>
-                </sheet>
-            </form>
-        </field>
-
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="client_adresse_tree_view"/>
     </record>
 
    <record model="ir.ui.view" id="client_order_form">
