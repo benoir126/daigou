@@ -14,8 +14,10 @@
         <field name="arch" type="xml">
 
             <form string="Client">
+                <header>
+                    <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
+                </header>
                 <sheet>
-                    <div>
                         <label string="姓名" />
                         <label string="微信号" />
                         <label string="电话号码" />
@@ -25,9 +27,7 @@
                         <label string="省份" />
                         <label string="国家" />
                         <label string="客户等级" />
-                    </div>
 
-                    <div>
                         <field name="name"/>
                         <field name="weixinname"/>
                         <field name="telephone"/>
@@ -37,8 +37,6 @@
                         <field name="province"/>
                         <field name="country"/>
                         <field name="level_client"/>
-                    </div>
-
                 </sheet>
 
             </form>
