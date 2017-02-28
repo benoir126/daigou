@@ -6,7 +6,7 @@
 
     'version': '0.2',
 
-    'category': 'Generic Modules/Others',
+    'category': 'Sales',
 
     'description': """ 基于odoo 9 开发的代购业务管理模块 """,
 
