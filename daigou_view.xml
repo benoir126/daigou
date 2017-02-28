@@ -59,7 +59,6 @@
                 <field name="weixinname"/>
                 <field name="name"/>
                 <field name="telephone"/>
-                <field name="adresse"/>
                 <field name="city"/>
             </tree>
         </field>
