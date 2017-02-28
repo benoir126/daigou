@@ -55,23 +55,13 @@
         <field name="model">daigou.client</field>
 
         <field name="arch" type="xml">
-            <header>
-                <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
-            </header>
-            <tree string="List.Client" > 
-
+            <tree string="List.Client" >
                 <field name="weixinname"/>
-
                 <field name="name"/>
-
                 <field name="telephone"/>
-
                 <field name="adresse"/>
-
                 <field name="city"/>
-
             </tree>
-
         </field>
 
     </record>
