@@ -48,7 +48,7 @@
     </record>
 
 
-    <record model="ir.ui.view" id="client_adresse_tree">
+    <record id="client_adresse_tree_view" model="ir.ui.view">
 
         <field name="name">client.adresse.tree</field>
 
@@ -77,9 +77,9 @@
     </record>
 
 
-    <record model="ir.actions.act_window" id="action_client"> 
+    <record id="show_list_client_action" model="ir.actions.act_window">
 
-        <field name="name">客户列表</field>
+        <field name="name">List of Clients</field>
 
         <field name="res_model">daigou.client</field> 
 
@@ -208,7 +208,7 @@
 
        <menuitem name="代购业务管理" id="section_main_menu_daigou" parent="daigou" />
 
-        <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="action_client" sequence="1" />
+        <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="show_list_client_action" sequence="1" />
 
         <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_order" sequence="2" />
     </data>
