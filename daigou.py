@@ -12,6 +12,16 @@ class Client(models.Model):
 
     _rec_name = 'weixinname'
 
+    def show_client_order_form_view(self, cr, uid, ids, context=None):
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': 'daigou.order',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_id': 'client_order_form',
+            'target': 'new',
+        }
+
     name = fields.Char('姓名', required=True)
 
     weixinname = fields.Char('微信号')
@@ -55,7 +65,9 @@ class ProductCategory(models.Model):
 
     type = fields.Selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
 
-
+#----------------------------------------------------------
+# Orders
+#----------------------------------------------------------
 class DaigouOrder(models.Model):
 
     _name = 'daigou.order'
