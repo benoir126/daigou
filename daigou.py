@@ -18,7 +18,6 @@ class Client(models.Model):
             'res_model': 'daigou.order',
             'view_type': 'form',
             'view_mode': 'form',
-            'res_id': 'client_order_form',
             'target': 'new',
         }
 
