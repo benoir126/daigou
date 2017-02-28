@@ -15,31 +15,30 @@
 
             <form string="Client">
                 <sheet>
-                    <label string="姓名" />
-                    <field name="name"/>
-                    <label string="微信号" />
-                    <field name="weixinname"/>
+                    <div>
+                        <label string="姓名" />
+                        <label string="微信号" />
+                        <label string="电话号码" />
+                        <label string="地址" />
+                        <label string="城市" />
+                        <label string="邮编" />
+                        <label string="省份" />
+                        <label string="国家" />
+                        <label string="客户等级" />
+                    </div>
 
-                    <label string="电话号码" />
-                    <field name="telephone"/>
+                    <div>
+                        <field name="name"/>
+                        <field name="weixinname"/>
+                        <field name="telephone"/>
+                        <field name="adresse"/>
+                        <field name="city"/>
+                        <field name="cp"/>
+                        <field name="province"/>
+                        <field name="country"/>
+                        <field name="level_client"/>
+                    </div>
 
-                    <label string="地址" />
-                    <field name="adresse"/>
-
-                    <label string="城市" />
-                    <field name="city"/>
-
-                    <label string="邮编" />
-                    <field name="cp"/>
-
-                    <label string="省份" />
-                    <field name="province"/>
-
-                    <label string="国家" />
-                    <field name="country"/>
-
-                    <label string="客户等级" />
-                    <field name="level_client"/>
                 </sheet>
 
             </form>
