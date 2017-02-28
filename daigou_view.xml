@@ -152,10 +152,10 @@
                 <field name="paye_total"/>
 
                 <!--<label string="是否包邮" />-->
-                <field name="fl_baoyou"/>
+                <field name="fl_baoyou" string="是否包邮"/>
 
                 <!--<label string="是否已经付运费" />-->
-                <field name="fl_yunfei"/>
+                <field name="fl_yunfei" string="是否已经付运费"/>
 
                 <!--<label string="备注" />-->
                 <field name="commentaire_achat"/>
