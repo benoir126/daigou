@@ -3,15 +3,12 @@
 <openerp>
 
     <data>
-
-    <record model="ir.ui.view" id="client_adresse_form"> 
-
+    <!-- Views for client -->
+    <record model="ir.ui.view" id="client_adresse_form">
         <field name="name">client.adresse.form</field>
-
-        <field name="model">daigou.client</field> 
+        <field name="model">daigou.client</field>
 
         <field name="arch" type="xml">
-
             <form string="Client">
                 <header>
                     <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
@@ -26,7 +23,6 @@
                         <label string="省份" />
                         <label string="国家" />
                         <label string="客户等级" />
-
                         <field name="name"/>
                         <field name="weixinname"/>
                         <field name="telephone"/>
@@ -37,18 +33,14 @@
                         <field name="country"/>
                         <field name="level_client"/>
                 </sheet>
-
             </form>
-
         </field>
 
     </record>
 
 
     <record id="client_adresse_tree_view" model="ir.ui.view">
-
         <field name="name">client.tree</field>
-
         <field name="model">daigou.client</field>
 
         <field name="arch" type="xml">
@@ -62,7 +54,7 @@
 
     </record>
 
-
+    <!-- Actions for client -->
     <record id="show_list_client_action" model="ir.actions.act_window">
         <field name="name">Clientlists</field>
         <field name="type">ir.actions.act_window</field>
@@ -72,16 +64,13 @@
         <field name="view_id" ref="client_adresse_tree_view"/>
     </record>
 
+   <!-- Views for orders -->
    <record model="ir.ui.view" id="client_order_form">
-
         <field name="name">client.order.form</field>
-
         <field name="model">daigou.order</field>
 
         <field name="arch" type="xml">
-
             <form string="Order">
-
                 <label string="下单日期" />
                 <field name="date_order"/>
 
@@ -112,24 +101,18 @@
                 <label string="备注" />
                 <field name="commentaire_achat"/>
             </form>
-
         </field>
 
     </record>
 
 
-    <record id="client_order_tree" model="ir.ui.view">
-
-        <field name="name">client.order.tree</field>
-
+    <record id="daigou_order_tree" model="ir.ui.view">
+        <field name="name">daigou.order.tree</field>
         <field name="model">daigou.order</field>
-
         <field name="type">tree</field>
 
         <field name="arch" type="xml">
-
             <tree string="List.Order" >
-
                 <!--<label string="下单日期" />-->
                 <field name="date_order"/>
 
@@ -159,32 +142,20 @@
 
                 <!--<label string="备注" />-->
                 <field name="commentaire_achat"/>
-
             </tree>
-
         </field>
 
     </record>
+
+    <!-- Actions for orders -->
     <record model="ir.actions.act_window" id="action_order">
-
         <field name="name">订单查询</field>
-
         <field name="res_model">daigou.order</field>
-
         <field name="view_type">form</field>
-
         <field name="view_mode">tree,form</field>
-
+        <field name="view_id" ref="daigou_order_tree"/>
     </record>
-<!--
-    <menuitem id="daigou" name="代购业务" sequence="100" />
 
-       <menuitem name="代购业务管理" id="section_main_menu_daigou" parent="daigou" />
-
-        <menuitem name="客户信息管理" id="choix_client" parent="section_main_menu_daigou" action="show_list_client_action" sequence="1" />
-
-        <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_order" sequence="2" />
--->
     </data>
 
 </openerp>
