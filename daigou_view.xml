@@ -4,7 +4,6 @@
 
     <data>
 
-
     <record model="ir.ui.view" id="client_adresse_form"> 
 
         <field name="name">client.adresse.form</field>
