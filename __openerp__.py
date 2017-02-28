@@ -8,9 +8,7 @@
 
     'category': 'Generic Modules/Others',
 
-    'description': """ 基于odoo 9 开发的代购业务管理模块
-
-    """,
+    'description': """ 基于odoo 9 开发的代购业务管理模块 """,
 
     'author': 'Dolphin ZHENG',
 
