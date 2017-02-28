@@ -119,7 +119,7 @@
     </record>
 
 
-    <record model="ir.ui.view" id="client_order_tree">
+    <record id="client_order_tree" model="ir.ui.view">
 
         <field name="name">client.order.tree</field>
 
@@ -136,31 +136,31 @@
 
                 <!--<label string="客户ID" />-->
                 <field name="client_id"/>
-<!--
-                <label string="商品购买价" />
+
+                <!--<label string="商品购买价" />-->
                 <field name="price_item_vente_unit_achat"/>
 
-                <label string="最终卖价" />
+                <!-- <label string="最终卖价" />-->
                 <field name="price_item_vente_unit_fin"/>
 
-                <label string="下单数量" />
+                <!--<label string="下单数量" />-->
                 <field name="qte_order"/>
 
-                <label string="已经购买数量" />
+                <!--<label string="已经购买数量" />-->
                 <field name="qte_ok"/>
 
-                <label string="付款总数" />
+                <!--<label string="付款总数" />-->
                 <field name="paye_total"/>
 
-                <label string="是否包邮" />
+                <!--<label string="是否包邮" />-->
                 <field name="fl_baoyou"/>
 
-                <label string="是否已经付运费" />
+                <!--<label string="是否已经付运费" />-->
                 <field name="fl_yunfei"/>
 
-                <label string="备注" />
+                <!--<label string="备注" />-->
                 <field name="commentaire_achat"/>
--->
+
             </tree>
 
         </field>
