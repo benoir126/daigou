@@ -83,9 +83,19 @@
 
         <field name="res_model">daigou.client</field> 
 
-        <field name="view_type">form</field> 
-
-        <field name="view_mode">tree,form</field>
+        <field name="arch" type="xml">
+            <form string="Client">
+                <header>
+                    <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <field name="weixinname"/>
+                    <field name="name"/>
+                    <field name="telephone"/>
+                    <field name="city"/>
+                </sheet>
+            </form>
+        </field>
 
     </record>
 
