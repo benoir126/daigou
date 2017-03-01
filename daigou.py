@@ -70,7 +70,7 @@ class DaigouOrder(models.Model):
     fl_yunfei = fields.Boolean('Active', help="是否已经付运费")
     taux_achat = fields.Float('汇率')
     commentaire_achat = fields.Char('备注')
-
+    weixinname = fields.Char('Weixin ID', related='daigou.client.weixinname', store=True)
     order_statut = fields.Selection([('0',u'已下单'), ('1',u'采购完成'),('2',u'已经发货'),('3',u'已结算'),('99',u'退款')], default='0')
 
 
