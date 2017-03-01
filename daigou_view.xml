@@ -66,40 +66,34 @@
 
    <!-- Views for orders -->
    <record model="ir.ui.view" id="client_order_form">
-        <field name="name">client.order.form</field>
+        <field name="name">daigou.client.order.form.view</field>
         <field name="model">daigou.order</field>
 
         <field name="arch" type="xml">
             <form string="Order">
-                <label string="下单日期" />
-                <field name="date_order"/>
-
-                <label string="客户ID" />
-                <field name="client_id"/>
-
-                <label string="商品购买价" />
-                <field name="price_item_vente_unit_achat"/>
-
-                <label string="最终卖价" />
-                <field name="price_item_vente_unit_fin"/>
-
-                <label string="下单数量" />
-                <field name="qte_order"/>
-
-                <label string="已经购买数量" />
-                <field name="qte_ok"/>
-
-                <label string="付款总数" />
-                <field name="paye_total"/>
-
-                <label string="是否包邮" />
-                <field name="fl_baoyou"/>
-
-                <label string="是否已经付运费" />
-                <field name="fl_yunfei"/>
-                <field name="order_statut"/>
-                <label string="备注" />
-                <field name="commentaire_achat"/>
+                <sheet>
+                    <label string="下单日期" />
+                    <field name="date_order"/>
+                    <label string="客户ID" />
+                    <field name="client_id"/>
+                    <label string="商品购买价" />
+                    <field name="price_item_vente_unit_achat"/>
+                    <label string="最终卖价" />
+                    <field name="price_item_vente_unit_fin"/>
+                    <label string="下单数量" />
+                    <field name="qte_order"/>
+                    <label string="已经购买数量" />
+                    <field name="qte_ok"/>
+                    <label string="付款总数" />
+                    <field name="paye_total"/>
+                    <label string="是否包邮" />
+                    <field name="fl_baoyou"/>
+                    <label string="是否已经付运费" />
+                    <field name="fl_yunfei"/>
+                    <field name="order_statut"/>
+                    <label string="备注" />
+                    <field name="commentaire_achat"/>
+                </sheet>
             </form>
         </field>
 
