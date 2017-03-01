@@ -14,7 +14,7 @@
 
     'depends': ['base'],
 
-    'data': ['daigou_view.xml','views/daigou_menuitem_view.xml',],
+    'data': ['daigou_view.xml','views/daigou_menuitem_view.xml'],
 
     'website': 'www.google.com',
 

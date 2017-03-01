@@ -148,12 +148,17 @@
     </record>
 
     <!-- Actions for orders -->
-    <record model="ir.actions.act_window" id="action_order">
+    <record model="ir.actions.act_window" id="action_daigou_order">
         <field name="name">订单查询</field>
         <field name="res_model">daigou.order</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="daigou_order_tree"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to define a new order.
+            </p>
+        </field>
+        <!--<field name="view_id" ref="daigou_order_tree"/>-->
     </record>
 
     </data>
