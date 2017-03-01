@@ -91,7 +91,6 @@
                     <label string="是否已经付运费" />
                     <field name="fl_yunfei"/>
                     <field name="order_statut"/>
-                    <field name="wexinname"/>
                     <label string="备注" />
                     <field name="commentaire_achat"/>
                 </sheet>
