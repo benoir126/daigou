@@ -22,7 +22,7 @@ class Client(models.Model):
         }
 
     name = fields.Char('姓名', required=True)
-    weixinname = fields.Char('微信号')
+    weixin_id = fields.Char('微信号')
     telephone = fields.Char('电话号码', required=True)
     adresse = fields.Char('地址', required=True)
     city = fields.Char('城市', required=True)
@@ -58,19 +58,19 @@ class DaigouOrder(models.Model):
     _order = 'date_order'
 
     date_order = fields.Date('下单日期', help="下单日期缺省是当天日期",default=date.today().strftime('%Y-%m-%d'))
-    client_id = fields.Integer('客户ID')
+    weixin_id = fields.Many2one('daigou.client', string='微信号', readonly=True, required=True, change_default=True, index=True, track_visibility='always')
     order_item = fields.Char('商品名称')
-    price_item_vente_unit_str = fields.Float('商品最初定价')
-    price_item_vente_unit_fin = fields.Float('最终卖价')
-    price_item_vente_unit_achat = fields.Float('商品购买价')
+    price_item_vente_unit_str = fields.Monetary('商品最初定价')
+    price_item_vente_unit_fin = fields.Monetary('最终卖价')
+    price_item_vente_unit_achat = fields.Monetary('商品购买价')
     qte_order = fields.Integer('下单数量',default=1)
     qte_ok = fields.Integer('已经购买数量')
     paye_total = fields.Float('付款总数')
-    fl_baoyou = fields.Boolean('Active', help="是否包邮")
-    fl_yunfei = fields.Boolean('Active', help="是否已经付运费")
+    fl_baoyou = fields.Boolean('是否包邮')
+    fl_yunfei = fields.Boolean('运费是否已付')
     taux_achat = fields.Float('汇率')
-    commentaire_achat = fields.Text('备注', help="订单备注")
+    commentaire_achat = fields.Text('订单备注')
     #weixinname = fields.Char('Weixin ID', related='daigou.client.weixinname', store=True)
-    order_statut = fields.Selection([('0',u'已下单'), ('1',u'采购完成'),('2',u'已经发货'),('3',u'已结算'),('99',u'退款')], default='0')
+    order_statut = fields.Selection([('0',u'已下单'), ('1',u'采购完成'),('2',u'已经发货'),('3',u'已结算'),('99',u'退款')], readonly=True, index=True, default='0')
 
 
