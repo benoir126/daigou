@@ -74,7 +74,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="client_id"/>
+                            <field name="weixin_id" options='{"always_reload": True}'/>
                             <field name="date_order"/>
                             <field name="order_item"/>
                             <field name="price_item_vente_unit_achat"/>
@@ -108,7 +108,7 @@
                 <field name="date_order"/>
                 <field name="order_statut"/>
                 <!--<label string="客户ID" />-->
-                <field name="client_id"/>
+                <field name="weixin_id"/>
                 <field name="order_item"/>
                 <!--<label string="商品购买价" />-->
                 <field name="price_item_vente_unit_achat"/>
