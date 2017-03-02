@@ -58,7 +58,7 @@ class DaigouOrder(models.Model):
     _order = 'date_order desc, weixin_id'
 
     date_order = fields.Date('下单日期', help="下单日期缺省是当天日期",default=date.today().strftime('%Y-%m-%d'))
-    weixin_id = fields.Many2one('daigou.client', string='微信号', readonly=True, required=True, change_default=True, index=True, track_visibility='always')
+    weixin_id = fields.Many2one('daigou.client', required=True, index=True)
     order_item = fields.Char('商品名称')
     price_item_vente_unit_str = fields.Float('商品最初定价')
     price_item_vente_unit_fin = fields.Float('最终卖价')
