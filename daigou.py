@@ -10,7 +10,7 @@ class Client(models.Model):
 
     _name = 'daigou.client'
     _description = "Clients for daigou"
-    _rec_name = 'weixinname'
+    _rec_name = 'weixin_id'
 
     def show_client_order_form_view(self, cr, uid, ids, context=None):
         return {
@@ -55,7 +55,7 @@ class DaigouOrder(models.Model):
 
     _name = 'daigou.order'
     _description = "orders"
-    _order = 'date_order'
+    _order = 'date_order desc, weixin_id'
 
     date_order = fields.Date('下单日期', help="下单日期缺省是当天日期",default=date.today().strftime('%Y-%m-%d'))
     weixin_id = fields.Many2one('daigou.client', string='微信号', readonly=True, required=True, change_default=True, index=True, track_visibility='always')
