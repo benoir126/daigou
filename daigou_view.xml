@@ -24,7 +24,7 @@
                         <label string="国家" />
                         <label string="客户等级" />
                         <field name="name"/>
-                        <field name="weixinname"/>
+                        <field name="weixin_id"/>
                         <field name="telephone"/>
                         <field name="adresse"/>
                         <field name="city"/>
@@ -45,7 +45,7 @@
 
         <field name="arch" type="xml">
             <tree string="List.Client" >
-                <field name="weixinname"/>
+                <field name="weixin_id"/>
                 <field name="name"/>
                 <field name="telephone"/>
                 <field name="city"/>
