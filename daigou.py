@@ -24,7 +24,7 @@ class Client(models.Model):
     name = fields.Char(u'姓名', required=True)
     weixin_id = fields.Char(u'微信号', required=True)
     telephone = fields.Char(u'电话号码', required=True)
-    adresse = fields.Char(u'地址', required=True)
+    adresse = fields.Text(u'地址', required=True)
     city = fields.Char(u'城市', required=True)
     cp = fields.Char(u'邮编')
     province = fields.Char(u'省份')
