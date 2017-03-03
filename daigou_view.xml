@@ -14,24 +14,19 @@
                     <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
                 </header>
                 <sheet>
-                        <label string="姓名" />
-                        <label string="微信号" />
-                        <label string="电话号码" />
-                        <label string="地址" />
-                        <label string="城市" />
-                        <label string="邮编" />
-                        <label string="省份" />
-                        <label string="国家" />
-                        <label string="客户等级" />
+                    <group>
                         <field name="name"/>
                         <field name="weixin_id"/>
                         <field name="telephone"/>
-                        <field name="adresse"/>
-                        <field name="city"/>
+                        <field name="level_client"/>
+                    </group>
+                    <group>
                         <field name="cp"/>
+                        <field name="city"/>
                         <field name="province"/>
                         <field name="country"/>
-                        <field name="level_client"/>
+                    </group>
+                        <field name="adresse"/>
                 </sheet>
             </form>
         </field>
