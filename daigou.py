@@ -22,15 +22,15 @@ class Client(models.Model):
         }
 
     name = fields.Char(u'姓名', required=True)
-    weixin_id = fields.Char(u'微信号')
+    weixin_id = fields.Char(u'微信号', required=True)
     telephone = fields.Char(u'电话号码', required=True)
     adresse = fields.Char(u'地址', required=True)
     city = fields.Char(u'城市', required=True)
     cp = fields.Char(u'邮编')
     province = fields.Char(u'省份')
     country = fields.Char(u'国家')
-    level_client = fields.Integer(u'客户等级')
-    email_client = fields.Char(u'电子邮箱')
+    level_client = fields.Integer(u'客户等级',default=1)
+    email_client = fields.Char(u'电子邮箱', default='xxx@gmail.com')
 
 #----------------------------------------------------------
 # Categories
