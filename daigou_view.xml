@@ -17,17 +17,17 @@
                     <group>
                         <div class="row">
                             <div class="col-xs-4">
+                                <label string="姓名" />
                                 <field name="name" string="姓名"/>
                             </div>
                              <div class="col-xs-4">
+                                 <label string="微信号" />
                                 <field name="weixin_id" string="微信号"/>
-                            </div>
-                             <div class="col-xs-4">
-                                <field name="telephone" string="电话号码"/>
                             </div>
                         </div>
                     </group>
                     <group>
+                        <field name="telephone" string="电话号码"/>
                         <field name="cp"/>
                         <field name="city"/>
                         <field name="province"/>
