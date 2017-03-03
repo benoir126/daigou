@@ -33,7 +33,9 @@
                         <field name="province"/>
                         <field name="country"/>
                     </group>
+                    <label string="具体地址" />
                     <field name="adresse"/>
+                    <label string="客户等级" />
                     <field name="level_client"/>
                 </sheet>
             </form>
