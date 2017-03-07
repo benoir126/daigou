@@ -80,6 +80,6 @@ class DaigouOrder(models.Model):
     taux_achat = fields.Float(u'汇率')
     commentaire_achat = fields.Text(u'订单备注')
     #weixinname = fields.Char('Weixin ID', related='daigou.client.weixinname', store=True)
-    order_statut = fields.Selection([('0',u'已下单'), ('1',u'采购完成'),('2',u'已经发货'),('3',u'已结算'),('99',u'退款')], readonly=True, index=True, default='0')
+    order_statut = fields.Selection([('0',u'已下单'), ('1',u'采购完成'),('2',u'已经发货'),('3',u'已结算'),('99',u'退款')], readonly=False, index=True, default='0')
 
 
