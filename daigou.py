@@ -14,7 +14,7 @@ class Client(models.Model):
 
     def show_client_order_form_view(self, cr, uid, ids, context=None):
         return {
-            'name': 'action.name',
+            'name': action.name,
             'type': 'ir.actions.act_window',
             'res_model': 'daigou.order',
             'view_type': 'form',
@@ -22,6 +22,7 @@ class Client(models.Model):
             'target': 'new',
             'flags': {'action_buttons': True},
             'context': context,  # May want to modify depending on the source/destination
+            'weixin_id': context.get('weixin_id','')
         }
 
     @api.model
