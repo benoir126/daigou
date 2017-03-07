@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <form string="Client">
                 <header>
-                    <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight"/>
+                    <button string="Generate order" type="object" name="show_client_order_form_view" class="oe_highlight" context="{'weixin_id': weixin_id}"/>
                 </header>
                 <sheet>
                     <group>
