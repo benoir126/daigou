@@ -13,6 +13,7 @@ class Client(models.Model):
     _rec_name = 'weixin_id'
 
     def show_client_order_form_view(self, cr, uid, ids, context=None):
+        context = context or {}
         return {
             'type': 'ir.actions.act_window',
             'res_model': 'daigou.order',
@@ -20,7 +21,7 @@ class Client(models.Model):
             'view_mode': 'form',
             'target': 'new',
             'flags': {'action_buttons': True},
-            'context': context,  # May want to modify depending on the source/destination
+            'context': context.update({'weixin_id': weixin_id}),  # May want to modify depending on the source/destination
         }
     @api.model
     def _needaction_domain_get(self):
