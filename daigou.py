@@ -19,6 +19,8 @@ class Client(models.Model):
             'view_type': 'form',
             'view_mode': 'form',
             'target': 'new',
+            'flags': {'action_buttons': True},
+            'context': context,  # May want to modify depending on the source/destination
         }
     @api.model
     def _needaction_domain_get(self):
