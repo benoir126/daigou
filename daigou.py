@@ -7,9 +7,8 @@ from openerp import models, fields, api
 # Clients
 #----------------------------------------------------------
 class Client(models.Model):
-
-    _inherit = ['ir.needaction_mixin']
     _name = 'daigou.client'
+    _inherit = ['ir.needaction_mixin']
     _description = "Clients for daigou"
     _rec_name = 'weixin_id'
 
@@ -26,7 +25,7 @@ class Client(models.Model):
         """
         Show a count of total clients on the menu badge
         """
-        return []
+        return [('name','!=',False)]
 
     name = fields.Char(u'姓名', required=True)
     weixin_id = fields.Char(u'微信号', required=True)
