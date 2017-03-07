@@ -14,6 +14,7 @@ class Client(models.Model):
 
     def show_client_order_form_view(self, cr, uid, ids, context=None):
         return {
+            'name': 'action.name',
             'type': 'ir.actions.act_window',
             'res_model': 'daigou.order',
             'view_type': 'form',
@@ -22,6 +23,7 @@ class Client(models.Model):
             'flags': {'action_buttons': True},
             'context': context,  # May want to modify depending on the source/destination
         }
+
     @api.model
     def _needaction_domain_get(self):
         """
@@ -66,7 +68,7 @@ class DaigouOrder(models.Model):
     _order = 'date_order desc, weixin_id'
 
     date_order = fields.Date('下单日期', help="下单日期缺省是当天日期",default=date.today().strftime('%Y-%m-%d'))
-    weixin_id = fields.Many2one('daigou.client', required=True, index=True)
+    weixin_id = fields.Many2one('daigou.client', required=True, index=True,store=True)
     order_item = fields.Char(u'商品名称')
     price_item_vente_unit_str = fields.Float(u'商品最初定价')
     price_item_vente_unit_fin = fields.Float(u'最终卖价')
