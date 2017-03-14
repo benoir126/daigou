@@ -59,6 +59,19 @@ class ProductCategory(models.Model):
     sequence = fields.Integer('Sequence', select=True, help="Gives the sequence order when displaying a list of product categories.")
     type = fields.Selection([('view','View'), ('normal','Normal')], 'Category Type', help="A category of the view type is a virtual category that can be used as the parent of another category to create a hierarchical structure.")
 
+class Product(models.Model):
+
+    _name = 'daigou.product'
+    _description = "Product List"
+    _rec_name = 'name'
+
+    name = fields.Char(u'产品名称', required=True)
+    complete_name = fields.Char(u'产品描述', required=True)
+    parent_id = fields.Many2one('daigou.product.category', required=True, index=True,store=True)
+    sequence = fields.Integer('Sequence', select=True, help="Gives the sequence order when displaying a list of product categories.")
+    price_item_vente_unit_str = fields.Float(u'商品最初定价')
+    price_item_vente_unit_achat = fields.Float(u'商品购买价')
+
 #----------------------------------------------------------
 # Orders : every order for one client
 #----------------------------------------------------------
