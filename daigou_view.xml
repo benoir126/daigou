@@ -150,6 +150,19 @@
         <!--<field name="view_id" ref="daigou_order_tree"/>-->
     </record>
 
+            <!-- Actions for products -->
+    <record model="ir.actions.act_window" id="action_daigou_order">
+        <field name="name">产品报价</field>
+        <field name="res_model">daigou.product</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to define a new order.
+            </p>
+        </field>
+    </record>
+
     </data>
 
 </openerp>
