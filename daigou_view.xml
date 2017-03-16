@@ -151,7 +151,7 @@
     </record>
 
             <!-- Actions for products -->
-    <record model="ir.actions.act_window" id="action_daigou_order">
+    <record model="ir.actions.act_window" id="action_daigou_product">
         <field name="name">产品报价</field>
         <field name="res_model">daigou.product</field>
         <field name="view_type">form</field>
