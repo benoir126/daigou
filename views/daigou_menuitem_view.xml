@@ -8,6 +8,6 @@
         <menuitem name="代购业务管理" id="section_main_menu_daigou" parent="daigou" />
         <menuitem name="客户管理" id="choix_client" parent="section_main_menu_daigou" action="show_list_client_action" sequence="1" />
         <menuitem name="订单管理" id="daigou_order_client" parent="section_main_menu_daigou" action="action_daigou_order" sequence="2" />
-        <menuitem name="产品报价" id="daigou_order_client" parent="section_main_menu_daigou" action="action_daigou_product" sequence="3" />
+        <menuitem name="产品报价" id="daigou_product_list" parent="section_main_menu_daigou" action="action_daigou_product" sequence="3" />
     </data>
 </openerp>
